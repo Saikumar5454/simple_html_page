@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    font-family:'Segoe UI',sans-serif;
+    background:
+    radial-gradient(circle at top,#1b2735,#090a0f);
+}
+
+/* LOGIN CARD */
+
+.login-card{
+    width:420px;
+
+    backdrop-filter: blur(20px);
+
+    background: rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:
+    0 0 30px rgba(0,255,255,.2);
+
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* INPUT */
+
+.custom-input{
+    background:rgba(255,255,255,0.05)!important;
+    color:white!important;
+    border:none!important;
+}
+
+.custom-input:focus{
+
+    box-shadow:
+    0 0 15px cyan!important;
+
+    transform:scale(1.02);
+}
+
+.form-floating label{
+    color:#ddd;
+}
+
+/* BUTTON */
+
+.login-btn{
+
+    background:
+    linear-gradient(
+    45deg,
+    #00dbde,
+    #fc00ff);
+
+    border:none;
+
+    color:white;
+
+    transition:.4s;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 25px cyan;
+}
+
+/* SOCIAL */
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+}
+
+.social-icons i{
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.social-icons i:hover{
+
+    transform:
+    scale(1.3)
+    rotate(360deg);
+
+    color:cyan;
+}
+
+/* LINK */
+
+.forgot-link{
+
+    color:#00eaff;
+
+    text-decoration:none;
+}
+
+.forgot-link:hover{
+
+    color:white;
+}
+
+/* STARS */
+
+.stars,
+.twinkling{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.stars{
+
+    background:
+    transparent url("https://www.transparenttextures.com/patterns/stardust.png");
+
+    animation:
+    moveStars 120s linear infinite;
+}
+
+.twinkling{
+
+    background:
+    transparent url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+    animation:
+    twinkle 15s linear infinite;
+}
+
+@keyframes moveStars{
+
+    from{
+        background-position:0 0;
+    }
+
+    to{
+        background-position:-10000px 5000px;
+    }
+}
+
+@keyframes twinkle{
+
+    0%{
+        opacity:.4;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:.4;
+    }
+}
+
+@media(max-width:576px){
+
+.login-card{
+    width:95%;
+}
+}
